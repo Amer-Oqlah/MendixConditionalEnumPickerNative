@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="avertra.enumpickernative.EnumPickerNative" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Enum Picker Native</name>
+    <description>Conditional Enumneration Picker</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+             <property key="EnumAttribute" type="attribute" required="true" onChange="Action">
+	            <caption>Enum Field </caption>
+	            <description>Enumeration Attribute to be Filled with selected value</description>
+	            <attributeTypes>
+	     	     <attributeType name="Enum"/>
+        	    </attributeTypes>
+             </property>
+             <property key="scenario" type="expression" required="true">
+	           <caption>Scenario</caption>
+	           <description>Dynamic Expression ; when true returns "String" , should separated by comma (,)  for example : Banana,Apple,Orange , each value in the string represents Enum Attribute (value)  
+               </description>
+	           <returnType type="String" />
+              </property>
+              <property key="empty" type="string" defaultValue="empty">
+              <caption> Placeholder</caption>
+	          <description>Empty DropDown Option Placeholder</description>
+              </property>
+              <property key="Action" type="action">
+	          <caption>On change</caption>
+             <description>When ever the Enum Attribute changes , it would trigger the action </description>
+             </property>
+        </propertyGroup>
+
+    </properties>
+</widget>
